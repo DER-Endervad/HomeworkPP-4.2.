@@ -108,15 +108,15 @@ TEST_CASE("Test List", "[list]") {
 
     mylist.Clear();
     SECTION("PopFront") {
-        CHECK(mylist.PopFront() == 0);
+        CHECK_THROWS_AS(mylist.PopFront(), std::runtime_error);
     }
     SECTION("PopBack") {
-        CHECK(mylist.PopBack() == 0);
+        CHECK_THROWS_AS(mylist.PopBack(), std::runtime_error);
     }
 }
 
 int main(int argc, char* argv[]) {
     Catch::Session().run(argc, argv);
-    int t = 0;
-    std::cin >> t;
+    system("pause");
+    return Catch::Session().run(argc, argv);
 }
