@@ -108,10 +108,10 @@ TEST_CASE("Test List", "[list]") {
 
     mylist.Clear();
     SECTION("PopFront") {
-        CHECK(mylist.PopFront() == );
+        CHECK(mylist.PopFront() == 0);
     }
     SECTION("PopBack") {
-        CHECK(mylist.PopBack() == throws);
+        CHECK(mylist.PopBack() == 0);
     }
 }
 
