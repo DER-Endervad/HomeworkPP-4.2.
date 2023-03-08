@@ -116,7 +116,7 @@ TEST_CASE("Test List", "[list]") {
 }
 
 int main(int argc, char* argv[]) {
-    Catch::Session().run(argc, argv);
+    auto returns = Catch::Session().run(argc, argv);
     system("pause");
-    return Catch::Session().run(argc, argv);
+    return returns;
 }
